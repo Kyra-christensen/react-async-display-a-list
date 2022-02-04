@@ -14,6 +14,10 @@ function App() {
     setPlanets(data);
   }
 
+  useEffect(() => {
+    fetchAndStorePlanets();
+  });
+  
   return (
     <div className="App">
         Render all your lists here. Pass the arrays as props.
