@@ -2,6 +2,7 @@ import './App.css';
 import homer from './homer.gif';
 import { useState, useEffect } from 'react';
 import PlanetsList from './PlanetsList';
+import DogsList from './DogsList';
 // import your arrays here
 import { getPlanets, getDogs } from './services/fetch-utils';
 
@@ -39,6 +40,15 @@ function App() {
           ? <img src={homer} />
           : <div className='planets-list'>
             <PlanetsList planets={planets} />
+          </div>
+      }
+
+      <h3>Dogs</h3>
+      {
+        isDogLoading
+          ? <img src={homer} />
+          : <div className='dogs-list'>
+            <DogsList dogs={dogs} />
           </div>
       }
     </div>
