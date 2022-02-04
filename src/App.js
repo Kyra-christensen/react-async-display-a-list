@@ -6,7 +6,14 @@ import { getPlanets } from './services/fetch-utils';
 function App() {
   const [planets, setPlanets] = useState([]);
   const [isPlanetLoading, setPlanetLoading] = useState(false);
-  
+
+  async function fetchAndStorePlanets() {
+    setPlanetLoading(true);
+    const data = await getPlanets();
+    setPlanetLoading(false);
+    setPlanets(data);
+  }
+
   return (
     <div className="App">
         Render all your lists here. Pass the arrays as props.
