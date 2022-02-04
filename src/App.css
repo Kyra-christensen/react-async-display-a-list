@@ -87,3 +87,21 @@
 .shows-list p { 
     margin: 15px;
 }
+
+.flowers-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+}
+
+.flower {
+    border: dotted 5px rgb(255, 146, 163);
+    margin: 5px;
+}
+
+.flower img {
+    object-fit: contain;
+    width: 250px;
+    height: 40vh;
+}
