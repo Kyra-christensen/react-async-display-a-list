@@ -5,6 +5,7 @@ import { getPlanets } from './services/fetch-utils';
 
 function App() {
   const [planets, setPlanets] = useState([]);
+  const [isPlanetLoading, setPlanetLoading] = useState(false);
   
   return (
     <div className="App">
