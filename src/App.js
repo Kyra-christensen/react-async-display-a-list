@@ -28,9 +28,17 @@ function App() {
     setDogs(data);
   }
 
+  async function fetchAndStoreShows() {
+    setShowLoading(true);
+    const data = await getShows();
+    setShowLoading(false);
+    setShows(data);
+  }
+
   useEffect(() => {
     fetchAndStorePlanets();
     fetchAndStoreDogs();
+    fetchAndStoreShows();
   }, []);
 
   return (
