@@ -5,7 +5,7 @@ import PlanetsList from './PlanetsList';
 import DogsList from './DogsList';
 import ShowsList from './ShowsList';
 // import your arrays here
-import { getPlanets, getDogs, getShows } from './services/fetch-utils';
+import { getPlanets, getDogs, getShows, getFlowers } from './services/fetch-utils';
 
 function App() {
   const [planets, setPlanets] = useState([]);
@@ -14,6 +14,8 @@ function App() {
   const [isDogLoading, setDogLoading] = useState(false);
   const [shows, setShows] = useState([]);
   const [isShowLoading, setShowLoading] = useState(false);
+  const [flowers, setFlowers] = useState([]);
+  const [isFlowerLoading, setFlowerLoading] = useState(false);
 
   async function fetchAndStorePlanets() {
     setPlanetLoading(true);
