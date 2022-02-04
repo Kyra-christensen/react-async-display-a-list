@@ -20,3 +20,10 @@ export async function getShows() {
     .select();
   return checkError(response);
 }
+
+export async function getFlowers() {
+  const response = await client
+    .from('flowers')
+    .select();
+  return checkError(response);
+}
