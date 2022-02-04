@@ -7,7 +7,8 @@ export default function Flower({
   native
 }) {
   return <div className='flower'>
-    <p>This is a {name}, they belong to the {family} family and to the {kingdom} kingdom and are native to these areas <Native native={native} /></p>
-
+    <p>This is a {name}, they belong to the {family} family and to the {kingdom} kingdom and are native to these areas {native}
+      {/* <Native native={native}/> */}
+    </p>
   </div>;
 }
