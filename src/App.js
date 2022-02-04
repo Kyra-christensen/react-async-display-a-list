@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react';
 import PlanetsList from './PlanetsList';
 import DogsList from './DogsList';
 import ShowsList from './ShowsList';
+import FlowersList from './FlowersList';
 // import your arrays here
-import { getPlanets, getDogs, getShows } from './services/fetch-utils';
+import { getPlanets, getDogs, getShows, getFlowers } from './services/fetch-utils';
 
 function App() {
   const [planets, setPlanets] = useState([]);
@@ -14,6 +15,8 @@ function App() {
   const [isDogLoading, setDogLoading] = useState(false);
   const [shows, setShows] = useState([]);
   const [isShowLoading, setShowLoading] = useState(false);
+  const [flowers, setFlowers] = useState([]);
+  const [isFlowerLoading, setFlowerLoading] = useState(false);
 
   async function fetchAndStorePlanets() {
     setPlanetLoading(true);
@@ -36,10 +39,18 @@ function App() {
     setShows(data);
   }
 
+  async function fetchAndStoreFlowers() {
+    setFlowerLoading(true);
+    const data = await getFlowers();
+    setFlowerLoading(false);
+    setFlowers(data);
+  }
+
   useEffect(() => {
     fetchAndStorePlanets();
     fetchAndStoreDogs();
     fetchAndStoreShows();
+    fetchAndStoreFlowers();
   }, []);
 
   return (
@@ -69,6 +80,15 @@ function App() {
           ? <img src={homer} />
           : <div className='shows-list'>
             <ShowsList shows={shows} />
+          </div>
+      }
+
+      <h3>Flowers:</h3>
+      {
+        isFlowerLoading
+          ? <img src={homer} />
+          : <div className='flowers-list'>
+            <FlowersList flowers={flowers} />
           </div>
       }
     </div>
