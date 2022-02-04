@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     fetchAndStorePlanets();
-  });
+  }, []);
 
   return (
     <div className="App">
