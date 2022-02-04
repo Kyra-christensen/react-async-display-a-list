@@ -18,8 +18,16 @@ function App() {
     setPlanets(data);
   }
 
+  async function fetchAndStoreDogs() {
+    setDogLoading(true);
+    const data = await getDogs();
+    setDogLoading(false);
+    setDogs(data);
+  }
+
   useEffect(() => {
     fetchAndStorePlanets();
+    fetchAndStoreDogs();
   }, []);
 
   return (
