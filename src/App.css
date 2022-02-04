@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.planets-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+}
+
+.planets-list p {
+    margin: 15px;
+    
+}
+
+.planet {
+    border: solid 5px cadetblue;
+    margin: 5px;
+}
