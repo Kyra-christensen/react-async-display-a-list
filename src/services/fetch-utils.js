@@ -13,3 +13,10 @@ export async function getDogs() {
     .select();
   return checkError(response);
 }
+
+export async function getShows() {
+  const response = await client
+    .from('shows')
+    .select();
+  return checkError(response);
+}

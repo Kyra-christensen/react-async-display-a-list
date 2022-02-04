@@ -71,3 +71,19 @@
     width: 200px;
     height: 40vh;
 }
+
+.shows-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darksalmon;
+}
+
+.show {
+    border: solid 5px black;
+    margin:5px;
+}
+
+.shows-list p { 
+    margin: 15px;
+}
