@@ -4,13 +4,15 @@ import { useState, useEffect } from 'react';
 import PlanetsList from './PlanetsList';
 import DogsList from './DogsList';
 // import your arrays here
-import { getPlanets, getDogs } from './services/fetch-utils';
+import { getPlanets, getDogs, getShows } from './services/fetch-utils';
 
 function App() {
   const [planets, setPlanets] = useState([]);
   const [isPlanetLoading, setPlanetLoading] = useState(false);
   const [dogs, setDogs] = useState([]);
   const [isDogLoading, setDogLoading] = useState(false);
+  const [shows, setShows] = useState([]);
+  const [isShowLoading, setShowLoading] = useState(false);
 
   async function fetchAndStorePlanets() {
     setPlanetLoading(true);
