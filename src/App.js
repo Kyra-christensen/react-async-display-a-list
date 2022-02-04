@@ -38,10 +38,18 @@ function App() {
     setShows(data);
   }
 
+  async function fetchAndStoreFlowers() {
+    setFlowerLoading(true);
+    const data = await getFlowers();
+    setFlowerLoading(false);
+    setFlowers(data);
+  }
+
   useEffect(() => {
     fetchAndStorePlanets();
     fetchAndStoreDogs();
     fetchAndStoreShows();
+    fetchAndStoreFlowers();
   }, []);
 
   return (
