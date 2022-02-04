@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import PlanetsList from './PlanetsList';
 import DogsList from './DogsList';
 import ShowsList from './ShowsList';
+import FlowersList from './FlowersList';
 // import your arrays here
 import { getPlanets, getDogs, getShows, getFlowers } from './services/fetch-utils';
 
@@ -79,6 +80,15 @@ function App() {
           ? <img src={homer} />
           : <div className='shows-list'>
             <ShowsList shows={shows} />
+          </div>
+      }
+
+      <h3>Flowers:</h3>
+      {
+        isFlowerLoading
+          ? <img src={homer} />
+          : <div className='flowers-list'>
+            <FlowersList flowers={flowers} />
           </div>
       }
     </div>
