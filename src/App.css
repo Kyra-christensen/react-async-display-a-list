@@ -53,3 +53,21 @@
     border: solid 5px cadetblue;
     margin: 5px;
 }
+
+.dogs-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+}
+
+.dog {
+    border: dotted 5px seagreen;
+    margin: 5px;
+}
+
+.dog img{
+    object-fit: contain;
+    width: 200px;
+    height: 40vh;
+}

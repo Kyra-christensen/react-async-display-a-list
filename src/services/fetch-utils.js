@@ -6,3 +6,10 @@ export async function getPlanets() {
     .select();
   return checkError(response);
 }
+
+export async function getDogs() {
+  const response = await client
+    .from('dogs')
+    .select();
+  return checkError(response);
+}
